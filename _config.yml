@@ -22,14 +22,14 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : 20186517.png"
   name             : "Thomas Lafontaine-Giguère, DMD"
   pronouns         : # example: "she/her"  
   bio              : "OMFS cooperative project"
   location         : "Qc, Canada"
-  employer         : "Red Brick University"
+  employer         : "University Laval"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "thomaslgiguere@gmail.com" 
 
   # Academic websites
   academia         : # URL
