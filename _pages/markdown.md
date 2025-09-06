@@ -1,15 +1,3 @@
-<div class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/VIDEO_ID"
-    title="Demo video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-
-
-# ligne 0 ici
 ---
 permalink: /markdown/
 title: "Markdown"
