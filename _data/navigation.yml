@@ -8,8 +8,8 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Publications"
-    url: /publications/
+#  - title: "Publications"
+#    url: /publications/
 
 #  - title: "Talks"
 #    url: /talks/    
@@ -20,11 +20,11 @@ main:
   - title: "Meshmixer Portfolio"
     url: /meshmixerportfolio/
         
-  - title: "Blog Posts"
-    url: /blog-posts/
+#  - title: "Blog Posts"
+#    url: /blog-posts/
     
-  - title: "CV"
-    url: /cv/
+  - title: "STL files"
+    url: /stl/
     
   # - title: "CV"
   #   url: /cv-json/
