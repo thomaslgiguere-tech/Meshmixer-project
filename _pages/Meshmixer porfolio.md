@@ -7,4 +7,8 @@ redirect_from:
   - /meshmixerportfolio.html
 ---
 
-Here Is gonna be some video demonstration links from youtube and possible pictures of the finshed products
+Make sure that the videos come with pictures of the finished products (Youtube options)
+
+<div class="chatgpt-video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/g4r_Y1XXh58" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>

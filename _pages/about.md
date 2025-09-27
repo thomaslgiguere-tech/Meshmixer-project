@@ -6,6 +6,15 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I love this game
+## Mission:
+-Provide easily accessible inspiration for OMFS practicionners
 
-------
+-Remain a free ressource 
+
+-Contribute to the advancement of modern surgical practice 
+
+-Prioritize patient safety and confidentiality
+
+-Respect professionnal autonomy and author's rights
+
+-----
