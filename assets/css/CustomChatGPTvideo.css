@@ -1,7 +1,14 @@
-/* Simple, good-looking video frame */
+.video-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}/* Simple, good-looking video frame */
 .video-card {
   margin: 1.5rem auto 2.25rem;
-  max-width: 960px;
+  max-width: 960px; /* Reduce from 960px for a tighter fit */
+  width: 100%;
   background: var(--mm-color-bg, #1f1f1f);
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.18);
@@ -13,6 +20,8 @@
 .video-aspect {
   position: relative;
   width: 100%;
+  max-width: 960px; /* Match the card */
+  margin: 0 auto;
   padding-bottom: 56.25%;
   background: #000; /* looks clean during load */
 }
