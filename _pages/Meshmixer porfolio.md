@@ -7,22 +7,29 @@ redirect_from:
   - /meshmixerportfolio.html
 ---
 
-<div class="video-cards-container">
-  <div class="video-card">
-    <div class="video-aspect">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/g4r_Y1XXh58" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video-caption">
-      <h3>Transpalatal strut for segmental Lefort in Meshmixer</h3>
-      <p>
-        Requires prior manipulation of models to set in final occlusion. Offset on hard tissue: 0.15mm
 
-        Offset on soft tissue: 2mm
-      </p>
-    </div>
+<div style="background-color:#212121; border-radius:10px; padding:20px; margin-bottom:30px;">
+ <div class="video-caption">
+      <h3> Transpalatal strut for segmental Lefort in Meshmixer </h3>
+      
   </div>
-
-  <div class="video-card">
+ <div align="center">
+  <iframe 
+    src="https://www.youtube.com/embed/g4r_Y1XXh58" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allowfullscreen 
+    style="width: 100%; height: 450px; border-radius:8px;">
+  </iframe>
+ </div>
+ <div class="video-caption">
+      <p> Requires prior manipulation of models to set in final occlusion.  
+   - Offset on hard tissue: 0.15mm  
+   - Offset on soft tissue: 2mm </p>
+  </div>
+ 
+</div>
+<div class="video-card">
     <div class="video-aspect">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/gfqdefPBwMI" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -38,4 +45,3 @@ redirect_from:
       </ul>
     </div>
   </div>
-</div>
