@@ -19,7 +19,7 @@ redirect_from:
     title="YouTube video player" 
     frameborder="0" 
     allowfullscreen 
-    style="width: 100%; height: 450px; border-radius:8px;">
+    style="width: 100%; height: 450px; border-radius:2px;">
   </iframe>
  </div>
  <div class="video-caption">
