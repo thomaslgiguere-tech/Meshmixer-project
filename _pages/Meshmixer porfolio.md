@@ -15,7 +15,7 @@ redirect_from:
   </div>
  <div align="center">
   <iframe 
-    src="https://www.youtube.com/embed/g4r_Y1XXh58" 
+    src="https://www.youtube.com/embed/g4r_Y1XXh58?start=80" 
     title="YouTube video player" 
     frameborder="0" 
     allowfullscreen 
