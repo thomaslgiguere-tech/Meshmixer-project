@@ -27,8 +27,27 @@ redirect_from:
    - Offset on hard tissue: 0.15mm  
    - Offset on soft tissue: 2mm </p>
   </div>
-</div>
 
+ /# lets make a line for the new one
+
+<div style="background-color:#212121; border-radius:10px; padding:20px; margin-bottom:30px;">
+ <div class="video-caption">
+      <h3> Mandibule resection and fibula reconstruction with guides </h3>
+      
+  </div>
+ <div align="center">
+  <iframe 
+    src="https://youtu.be/bZYoHdmSnu0?start=150" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allowfullscreen 
+    style="width: 100%; height: 450px; border-radius:2px;">
+  </iframe>
+ </div>
+ <div class="video-caption">
+      <p> Requires prior analysis of resection margins on scan, and isolation of mandibule and fibula.   </p>
+  </div>
+ 
  
 </div>
 <div class="video-card">
