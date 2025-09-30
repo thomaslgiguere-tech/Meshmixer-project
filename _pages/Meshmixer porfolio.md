@@ -27,38 +27,7 @@ redirect_from:
    - Offset on hard tissue: 0.15mm  
    - Offset on soft tissue: 2mm </p>
   </div>
- 
-<div style="background-color:#212121; border-radius:10px; padding:20px; margin-bottom:30px;">
- <div class="video-caption">
-      <h3> Mandibular resection and fibula reconstruction </h3>
-      
-  </div>
- <div align="center">
-  <iframe 
-    src="https://www.youtube.com/embed/g4r_Y1XXh58?start=150" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allowfullscreen 
-    style="width: 100%; height: 450px; border-radius:2px;">
-  </iframe>
- </div>
- <div class="video-caption">
-      <p> Note that the first 2 min is basic introduction to meshmixer.  
-   -   
-   -  </p>
-  </div>?start=80" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allowfullscreen 
-    style="width: 100%; height: 450px; border-radius:2px;">
-  </iframe>
- </div>
- <div class="video-caption">
-      <p> Requires prior manipulation of models to set in final occlusion.  
-   - Offset on hard tissue: 0.15mm  
-   - Offset on soft tissue: 2mm </p>
-  </div>
-
+</div>
 
  
 </div>
