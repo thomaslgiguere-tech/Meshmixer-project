@@ -53,7 +53,7 @@ redirect_from:
 
   <div align="center">
     <iframe 
-      src="https://www.youtube.com/embed/HtTD0FtQzkw"
+      src="https://www.youtube.com/embed/HtTD0FtQzkw?start=60"
       title="YouTube video player" 
       frameborder="0" 
       allowfullscreen 
