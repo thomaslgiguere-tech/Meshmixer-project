@@ -49,6 +49,25 @@ redirect_from:
 
 <!-- Video 3 -->
 <div style="background-color:#212121; border-radius:10px; padding:20px; margin-bottom:30px;">
+  <h3 style="color:#f5f5f5;">Intermediate splint for orthognatic surgery</h3>
+
+  <div align="center">
+    <iframe 
+      src="https://www.youtube.com/embed/HtTD0FtQzkw"
+      title="YouTube video player" 
+      frameborder="0" 
+      allowfullscreen 
+      style="width: 100%; height: 450px; border-radius:2px;">
+    </iframe>
+  </div>
+
+  <p style="color:#f5f5f5;">
+    This was done with the CBCT so that the condyle position dictated the axis of rotation.
+  </p>
+</div>
+
+<!-- Video 4 -->
+<div style="background-color:#212121; border-radius:10px; padding:20px; margin-bottom:30px;">
   <h3 style="color:#f5f5f5;">Facial profile simulator</h3>
 
   <div align="center">
