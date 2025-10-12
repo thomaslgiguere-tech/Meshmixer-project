@@ -63,6 +63,7 @@ redirect_from:
 
   <p style="color:#f5f5f5;">
     This was done with the CBCT so that the condyle position dictated the axis of rotation.
+    See beginning of the video, Occlusion should be very slightly openned to provide thickness to the splint
   </p>
 </div>
 
