@@ -49,54 +49,48 @@ textarea#stamp-input { width:100%; height:100%; box-sizing:border-box; padding:1
   </div>
 </div>
 
-<script>
-(function(){
+
+<script defer>
+window.addEventListener('DOMContentLoaded', function () {
   const input = document.getElementById('stamp-input');
   const output = document.getElementById('stamp-output');
   const clearBtn = document.getElementById('clear-btn');
   const copyBtn = document.getElementById('copy-btn');
   const selectBtn = document.getElementById('select-btn');
 
-  function render() {
-    // Use textContent to preserve literal characters and avoid HTML injection
-    output.textContent = input.value;
-  }
+  if (!input || !output) return; // hard guard if layout moves things unexpectedly
 
-  // Initial render (in case the textarea is prefilled)
-  document.addEventListener('DOMContentLoaded', render);
+  const render = () => { output.textContent = input.value; };
+
+  render(); // initial
   input.addEventListener('input', render);
 
-  clearBtn.addEventListener('click', function(){ input.value = ''; render(); input.focus(); });
+  clearBtn?.addEventListener('click', () => { input.value = ''; render(); input.focus(); });
 
-  selectBtn.addEventListener('click', function(){
-    // Create a range to select the output text for easy copying
-    if (document.createRange && window.getSelection) {
-      const range = document.createRange();
-      range.selectNodeContents(output);
-      const sel = window.getSelection();
-      sel.removeAllRanges();
-      sel.addRange(range);
-    }
+  selectBtn?.addEventListener('click', () => {
+    const range = document.createRange();
+    range.selectNodeContents(output);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
   });
 
-  copyBtn.addEventListener('click', async function(){
+  copyBtn?.addEventListener('click', async () => {
     try {
-      await navigator.clipboard.writeText(output.textContent);
+      await navigator.clipboard.writeText(output.textContent || '');
       copyBtn.textContent = 'Copied ✓';
-      setTimeout(()=> copyBtn.textContent = 'Copy', 1200);
-    } catch (err) {
-      // Fallback: select and let user copy
-      selectBtn.click();
+      setTimeout(() => (copyBtn.textContent = 'Copy'), 1200);
+    } catch {
+      selectBtn?.click(); // fallback
     }
   });
 
-  // Allow CMD/CTRL+Enter to copy quickly
-  input.addEventListener('keydown', function(e){
+  input.addEventListener('keydown', (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-      copyBtn.click();
+      copyBtn?.click();
       e.preventDefault();
     }
   });
-})();
+});
 </script>
 ---
