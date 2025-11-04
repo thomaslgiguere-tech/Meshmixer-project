@@ -42,7 +42,10 @@ textarea#stamp-input { width:100%; height:100%; box-sizing:border-box; padding:1
   </div>
 
   <div class="stamp-bottom">
-    <div id="stamp-output" class="output-box" role="region" aria-live="polite" aria-label="Stamp output"></div>
+    <!-- Inline styles with !important to override any site-wide color rules -->
+    <div id="stamp-output" class="output-box" role="region" aria-live="polite" aria-label="Stamp output" style="background:#000000 !important; color:#ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;">
+    </div>
   </div>
 </div>
 
