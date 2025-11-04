@@ -25,7 +25,10 @@ main:
     
   - title: "STL files"
     url: /stl/
-    
+
+  - title: "Stamp creator"
+    url: /stamp/
+  
   # - title: "CV"
   #   url: /cv-json/
     

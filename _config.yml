@@ -308,6 +308,8 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-remote-theme
+  - jekyll-include-cache 
   - jemoji
 
 # Mimic GitHub Pages with --safe

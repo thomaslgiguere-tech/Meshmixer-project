@@ -18,21 +18,28 @@ WORKDIR /usr/src/app
 # Set permissions for the working directory
 RUN chown -R vscode:vscode /usr/src/app
 
-# Switch to the non-root user
-USER vscode
+# Copy Gemfile and Gemfile.lock into the container (necessary for `bundle install`)
+# Copying the lockfile ensures the bundle resolver at build time installs the
+# exact same versions the host expects, avoiding runtime mismatches when the
+# project directory is bind-mounted over `/usr/src/app`.
+COPY Gemfile Gemfile.lock ./
 
-# Copy Gemfile into the container (necessary for `bundle install`)
-COPY Gemfile ./
-
-
-
-# Install bundler and dependencies
-RUN gem install connection_pool:2.5.0
-RUN gem install bundler:2.3.26
-RUN bundle install
+# Install bundler and dependencies as root during image build so gems are
+# installed into the system gem location and are not lost when the host
+# directory is bind-mounted over /usr/src/app at runtime.
+RUN gem install connection_pool:2.5.0 && \
+    gem install bundler:2.3.26 && \
+    bundle install
 
 # Copy the rest of the application code
 COPY . .
+
+# Ensure the application files are owned by the non-root user and then switch
+# to that user for runtime (safer execution).
+RUN chown -R vscode:vscode /usr/src/app
+
+# Switch to the non-root user
+USER vscode
 
 # Command to serve the Jekyll site
 CMD ["jekyll", "serve", "-H", "0.0.0.0", "-w"]
