@@ -97,7 +97,7 @@ redirect_from:
 
   <div align="center">
     <iframe 
-      src="https://youtu.be/embed/AA0ACX8LA_I" 
+      src="https://www.youtube.com/embed/AA0ACX8LA_I"
       title="YouTube video player" 
       frameborder="0" 
       allowfullscreen 
