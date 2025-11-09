@@ -90,3 +90,22 @@ redirect_from:
     </ul>
   </p>
 </div>
+
+<!-- Video 5 -->
+<div style="background-color:#212121; border-radius:10px; padding:20px; margin-bottom:30px;">
+  <h3 style="color:#f5f5f5;">Preparing a model to print for articulation</h3>
+
+  <div align="center">
+    <iframe 
+      src="https://youtu.be/embed/AA0ACX8LA_I" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allowfullscreen 
+      style="width: 100%; height: 450px; border-radius:2px;">
+    </iframe>
+  </div>
+
+  <p style="color:#f5f5f5;">
+    Create a regular base and hollow a model prior to printing prior so setting occlusion on the galetti.
+  </p>
+</div>
