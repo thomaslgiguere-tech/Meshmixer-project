@@ -31,6 +31,11 @@ RUN gem install connection_pool:2.5.0 && \
     gem install bundler:2.3.26 && \
     bundle install
 
+# Install entrypoint script to a fixed path outside the bind-mount so it
+# survives the volume overlay of /usr/src/app at runtime.
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 # Copy the rest of the application code
 COPY . .
 
@@ -41,8 +46,8 @@ RUN chown -R vscode:vscode /usr/src/app
 # Switch to the non-root user
 USER vscode
 
-# Command to serve the Jekyll site
-CMD ["jekyll", "serve", "-H", "0.0.0.0", "-w"]
+# Watches _config.yml and restarts Jekyll automatically on changes
+CMD ["/usr/local/bin/entrypoint.sh"]
 
 # Gemfile
 #gem "minimal-mistakes-jekyll"
