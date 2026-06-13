@@ -9,7 +9,7 @@ cleanup() {
 trap cleanup SIGTERM SIGINT
 
 start_jekyll() {
-  jekyll serve -H 0.0.0.0 -w &
+  jekyll serve -H 0.0.0.0 --config _config.yml,_config.local.yml -w &
   JEKYLL_PID=$!
   echo "Jekyll started (PID $JEKYLL_PID)"
 }
