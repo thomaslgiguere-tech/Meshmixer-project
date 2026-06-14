@@ -9,6 +9,25 @@ redirect_from:
 
 <!-- Video 1 -->
 <div style="background-color:#212121; border-radius:10px; padding:20px; margin-bottom:30px;">
+  <h3 style="color:#f5f5f5;">Splint occlusal final, Chirurgie orthognatique</h3>
+
+  <div align="center">
+    <iframe 
+      src="https://www.youtube.com/embed/R-l762zPrP8" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allowfullscreen 
+      style="width: 100%; height: 450px; border-radius:2px;">
+    </iframe>
+  </div>
+
+  <p style="color:#f5f5f5;">
+    Suggestion de workflow pour générer un guide occlusal qui sert à la fois de guide chirurgical et de mainteneur pour la dimension transverse après un Lefort segmentaire
+  </p>
+</div>
+
+<!-- Video 2 -->
+<div style="background-color:#212121; border-radius:10px; padding:20px; margin-bottom:30px;">
   <h3 style="color:#f5f5f5;">Transpalatal strut for segmental Lefort in Meshmixer</h3>
 
   <div align="center">

@@ -18,14 +18,9 @@ author_profile: true
     </div>
   </div>
 
-  <model-viewer
-    src="/assets/3d/skull.glb"
-    alt="Modèle 3D du crâne"
-    auto-rotate
-    camera-controls
-    loading="eager"
-    class="home-skull">
-  </model-viewer>
+  <img src="/assets/3d/skull_rotate.webp"
+       alt="Modèle 3D du crâne — rotation 360°"
+       class="home-skull">
 </div>
 
 <style>
@@ -74,12 +69,13 @@ author_profile: true
 
 /* ── 3D skull viewer ── */
 .home-skull {
+  display: block;
   width: 100%;
   height: 480px;
   border-radius: 16px;
-  background: #ffffff;
+  background: #f7f7f7;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  --progress-bar-color: var(--global-link-color);
+  object-fit: contain;
 }
 
 @media (max-width: 600px) {
