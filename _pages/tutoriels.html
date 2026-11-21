@@ -1,0 +1,40 @@
+---
+title: "Tutoriels"
+permalink: /tutoriels/
+redirect_from:
+  - /meshmixerportfolio/
+  - /meshmixerportfolio.html
+  - /md/
+---
+<div class="page-head">
+  <h1 lang="fr">Tutoriels</h1><h1 lang="en">Tutorials</h1>
+  <p lang="fr">Des cas que j'ai planifiés dans Meshmixer, filmés du début à la fin. Les vidéos se chargent seulement quand vous cliquez dessus.</p>
+  <p lang="en">Cases I planned in Meshmixer, recorded from start to finish. Videos only load when you click them.</p>
+</div>
+
+<div class="filters" role="group" aria-label="Filtre">
+  <button class="chip" type="button" data-filter="all" aria-pressed="true"><span lang="fr">Tout</span><span lang="en">All</span></button>
+  <button class="chip" type="button" data-filter="orthognathique" aria-pressed="false"><span lang="fr">Orthognathique</span><span lang="en">Orthognathic</span></button>
+  <button class="chip" type="button" data-filter="reconstruction" aria-pressed="false">Reconstruction</button>
+  <button class="chip" type="button" data-filter="consultation" aria-pressed="false">Consultation</button>
+  <button class="chip" type="button" data-filter="impression" aria-pressed="false"><span lang="fr">Impression</span><span lang="en">Printing</span></button>
+</div>
+
+<div class="videos">
+  {% for v in site.data.videos %}
+  <article class="video" data-tag="{{ v.tag }}">
+    <div class="player">
+      <button type="button" data-youtube="{{ v.youtube }}" data-start="{{ v.start }}" aria-label="{{ v.en.title }}">
+        <img src="https://i.ytimg.com/vi/{{ v.youtube }}/hqdefault.jpg" alt="" loading="lazy">
+        <span class="play"><svg width="18" height="20" viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1l12 7-12 7z" fill="#fff"/></svg></span>
+      </button>
+    </div>
+    <div class="video-body">
+      <span class="tag">{{ v.tag }}</span>
+      <h3 lang="fr">{{ v.fr.title }}</h3><h3 lang="en">{{ v.en.title }}</h3>
+      <ul lang="fr">{% for n in v.fr.notes %}<li>{{ n }}</li>{% endfor %}</ul>
+      <ul lang="en">{% for n in v.en.notes %}<li>{{ n }}</li>{% endfor %}</ul>
+    </div>
+  </article>
+  {% endfor %}
+</div>

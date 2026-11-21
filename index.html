@@ -1,0 +1,91 @@
+---
+title: "OMFS Planner"
+permalink: /
+redirect_from:
+  - /dicom-stl/
+---
+<div class="page-head">
+  <h1>OMFS Planner</h1>
+  <p lang="fr">OMFS Planner est un projet d'add-on Blender gratuit et open source pour mieux outiller les chirurgiens maxillo-faciaux devant des planifications simples de chirurgie de routine.</p>
+  <p lang="en">OMFS Planner is a free, open-source Blender add-on project to better equip oral and maxillofacial surgeons for simple planning of routine surgery.</p>
+  <p lang="fr">Ce site rassemble aussi les tutoriels et les fichiers que j'ai accumulés en chemin, à partager librement.</p>
+  <p lang="en">This site also gathers the tutorials and files I've collected along the way, free to share.</p>
+  <div class="byline">
+    <img src="{{ '/images/profile.jpg' | relative_url }}" alt="" width="34" height="34">
+    <span><span lang="fr">Un projet personnel de</span><span lang="en">A personal project by</span> <b>Thomas Lafontaine-Giguère, DMD</b> · Québec</span>
+  </div>
+</div>
+
+<div class="demo" id="demo">
+  <div class="steps" role="tablist" aria-label="OMFS Planner">
+    {% for s in site.data.demo %}
+    <button class="step" role="tab" type="button" id="tab-{{ s.id }}" aria-controls="panel-{{ s.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-collection="{{ s.collection }}">
+      <span lang="fr">{{ s.fr.title }}</span><span lang="en">{{ s.en.title }}</span>
+      <small lang="fr">{{ s.fr.text }}</small><small lang="en">{{ s.en.text }}</small>
+    </button>
+    {% endfor %}
+  </div>
+
+  <figure class="viewport">
+    <div class="vp-head"><span>User Perspective</span><span id="vp-coll">(1) Collection | {{ site.data.demo[0].collection }}</span></div>
+    <svg class="gizmo" viewBox="0 0 58 58" aria-hidden="true">
+      <line x1="29" y1="29" x2="48" y2="35" stroke="#e0566a" stroke-width="2"/><circle cx="48" cy="35" r="6" fill="#e0566a"/>
+      <line x1="29" y1="29" x2="16" y2="40" stroke="#86b44a" stroke-width="2"/><circle cx="16" cy="40" r="6" fill="#86b44a"/>
+      <line x1="29" y1="29" x2="29" y2="9" stroke="#4f86d9" stroke-width="2"/><circle cx="29" cy="9" r="6" fill="#4f86d9"/>
+    </svg>
+    {% for s in site.data.demo %}
+    <div class="vp-panel" role="tabpanel" id="panel-{{ s.id }}" aria-labelledby="tab-{{ s.id }}"{% unless forloop.first %} hidden{% endunless %}>
+      {% if s.video != "" %}
+      <video src="{{ s.video | relative_url }}" muted loop playsinline preload="metadata"></video>
+      {% else %}
+      <div class="ph">
+        <div class="play"><svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1l12 7-12 7z" fill="#cfcfcf"/></svg></div>
+        <b><span lang="fr">{{ s.fr.title }}</span><span lang="en">{{ s.en.title }}</span></b>
+        <span lang="fr">{{ s.fr.todo }}</span><span lang="en">{{ s.en.todo }}</span>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+    <div class="vp-foot">OMFS Planner · Blender 5.2</div>
+  </figure>
+</div>
+
+<section>
+  <h2 class="sec-title"><span lang="fr">Outils, tutoriels et fichiers</span><span lang="en">Tools, tutorials and files</span></h2>
+  <div class="cards">
+    <a class="card" href="{{ '/telecharger/' | relative_url }}">
+      <h3>OMFS Planner</h3>
+      <p lang="fr">L'add-on : ce qu'il demande, comment l'installer et le mettre à jour.</p>
+      <p lang="en">The add-on: what it needs, how to install and update it.</p>
+      <span class="go">→ <span lang="fr">Installer</span><span lang="en">Install</span></span>
+    </a>
+    <a class="card" href="{{ '/tutoriels/' | relative_url }}">
+      <h3 lang="fr">Tutoriels</h3><h3 lang="en">Tutorials</h3>
+      <p lang="fr">Mes cas filmés dans Meshmixer, classés par intervention.</p>
+      <p lang="en">My recorded Meshmixer cases, sorted by procedure.</p>
+      <span class="go">→ <span lang="fr">Voir les vidéos</span><span lang="en">Watch</span></span>
+    </a>
+    <a class="card" href="{{ '/fichiers/' | relative_url }}">
+      <h3 lang="fr">Fichiers</h3><h3 lang="en">Files</h3>
+      <p lang="fr">Articulateur, cylindres et autres STL, plus le Stamp creator.</p>
+      <p lang="en">Articulator, cylinders and other STL files, plus the Stamp creator.</p>
+      <span class="go">→ <span lang="fr">Parcourir</span><span lang="en">Browse</span></span>
+    </a>
+  </div>
+</section>
+
+<section class="get">
+  <div>
+    <h2 class="sec-title"><span lang="fr">L'essayer</span><span lang="en">Try it</span></h2>
+    <p class="small" lang="fr">macOS 14 ou plus récent, puce Apple. Le script installe Blender 5.2 au besoin. Les détails sont dans <a href="{{ '/telecharger/' | relative_url }}">Télécharger</a>.</p>
+    <p class="small" lang="en">macOS 14 or later, Apple silicon. The script installs Blender 5.2 if needed. Details are on the <a href="{{ '/telecharger/' | relative_url }}">Download</a> page.</p>
+  </div>
+  <div>
+    <p lang="fr">Dans le Terminal :</p><p lang="en">In Terminal:</p>
+    <div class="cmd">
+      <code id="install-cmd">{{ site.install_cmd }}</code>
+      <button class="copy" type="button" data-copy="install-cmd"><span lang="fr">Copier</span><span lang="en">Copy</span></button>
+    </div>
+    <p class="small" style="margin-top:10px"><span lang="fr">Ou le code source sur</span><span lang="en">Or the source code on</span> <a href="{{ site.planner_repo }}">GitHub</a>. <span lang="fr">Les pull requests sont les bienvenues.</span><span lang="en">Pull requests are welcome.</span></p>
+  </div>
+</section>

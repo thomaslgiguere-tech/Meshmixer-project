@@ -1,0 +1,84 @@
+# Vidéos de la page /tutoriels/ (ancien « Meshmixer Portfolio »).
+# Pour en ajouter une : copier un bloc. « youtube » = identifiant de la vidéo, « start » = seconde de départ.
+# « tag » sert au filtre : orthognathique, reconstruction, consultation, impression.
+- youtube: R-l762zPrP8
+  start: 0
+  tag: orthognathique
+  fr:
+    title: "Gouttière occlusale finale, chirurgie orthognathique"
+    notes:
+      - "Suggestion de workflow pour générer une gouttière occlusale qui sert à la fois de guide chirurgical et de mainteneur de la dimension transverse après un Le Fort segmentaire."
+  en:
+    title: "Final occlusal splint, orthognathic surgery"
+    notes:
+      - "A suggested workflow to make an occlusal splint that serves both as a surgical guide and as a transverse-dimension maintainer after a segmental Le Fort."
+
+- youtube: g4r_Y1XXh58
+  start: 80
+  tag: orthognathique
+  fr:
+    title: "Barre transpalatine pour Le Fort segmentaire dans Meshmixer"
+    notes:
+      - "Demande d'abord de placer les modèles en occlusion finale."
+      - "Décalage sur tissus durs : 0,15 mm. Décalage sur tissus mous : 2 mm."
+  en:
+    title: "Transpalatal strut for segmental Le Fort in Meshmixer"
+    notes:
+      - "Requires the models to be set in final occlusion first."
+      - "Offset on hard tissue: 0.15 mm. Offset on soft tissue: 2 mm."
+
+- youtube: bZYoHdmSnu0
+  start: 150
+  tag: reconstruction
+  fr:
+    title: "Résection mandibulaire et reconstruction par péroné avec guides"
+    notes:
+      - "Demande d'abord l'analyse des marges de résection sur le scan et l'isolement de la mandibule et du péroné."
+  en:
+    title: "Mandible resection and fibula reconstruction with guides"
+    notes:
+      - "Requires prior analysis of the resection margins on the scan, and isolation of the mandible and fibula."
+
+- youtube: HtTD0FtQzkw
+  start: 60
+  tag: orthognathique
+  fr:
+    title: "Gouttière intermédiaire pour chirurgie orthognathique"
+    notes:
+      - "Fait à partir du CBCT, pour que la position des condyles dicte l'axe de rotation."
+      - "Voir le début de la vidéo : l'occlusion doit être très légèrement ouverte pour donner de l'épaisseur à la gouttière."
+  en:
+    title: "Intermediate splint for orthognathic surgery"
+    notes:
+      - "Done from the CBCT so that the condyle position sets the axis of rotation."
+      - "See the start of the video: the occlusion should be opened very slightly to give the splint some thickness."
+
+- youtube: gfqdefPBwMI
+  start: 0
+  tag: consultation
+  fr:
+    title: "Simulateur de profil facial"
+    notes:
+      - "Appareil intra-oral pour la consultation, pour les grands avancements maxillaires."
+      - "Étape 1 : déplacer la copie du maxillaire."
+      - "Étape 2 : retirer la portion postérieure pour enlever le chevauchement."
+      - "Étape 3 : avec les outils aimant/cible, adapter la partie postérieure à la partie antérieure du maxillaire en position préopératoire."
+  en:
+    title: "Facial profile simulator"
+    notes:
+      - "Intraoral device for consultations about large maxillary advancements."
+      - "Step 1: move the copy of the maxilla."
+      - "Step 2: remove the posterior portion to get rid of the overlap."
+      - "Step 3: use the magnet/target tools to fit the posterior part to the anterior part of the actual pre-op maxilla."
+
+- youtube: AA0ACX8LA_I
+  start: 0
+  tag: impression
+  fr:
+    title: "Préparer un modèle à imprimer pour l'articulation"
+    notes:
+      - "Créer une base régulière et évider le modèle avant l'impression, pour ensuite régler l'occlusion sur le Galetti."
+  en:
+    title: "Preparing a model to print for articulation"
+    notes:
+      - "Make a regular base and hollow the model before printing, so the occlusion can then be set on the Galetti."

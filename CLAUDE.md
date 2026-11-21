@@ -4,41 +4,39 @@ Contexte pour Claude Code. Ce fichier est versionné : il est le même sur tous 
 
 ## Le projet
 
-Site **OMFS In-House VSP** (planification chirurgicale virtuelle en chirurgie maxillo-faciale), publié sur **https://omfsvsp.com** via GitHub Pages (fichier `CNAME`).
-Basé sur le thème Jekyll **Academic Pages** (dérivé de Minimal Mistakes).
+Site **OMFS In-House VSP** : la vitrine d'**OMFS Planner** (add-on Blender gratuit et open source de planification chirurgicale maxillo-faciale, dépôt `thomaslgiguere-tech/omfs-planner`), avec les tutoriels Meshmixer et des fichiers STL.
+Projet personnel de Thomas Lafontaine-Giguère, DMD : le ton reste léger et non commercial, et le crédit à l'auteur doit rester visible.
 
-- Dépôt : `github.com/thomaslgiguere-tech/Meshmixer-project`, branche `master`.
-- Chaque push sur `master` redéploie le site automatiquement (quelques minutes).
+- Dépôt : `github.com/thomaslgiguere-tech/Meshmixer-project`, branche `master`. Chaque push sur `master` redéploie le site (GitHub Pages, quelques minutes).
+- Adresse actuelle : **https://thomaslgiguere-tech.github.io/Meshmixer-project/** (`baseurl: "/Meshmixer-project"`). L'ancien domaine `omfsvsp.com` a expiré ; pour un futur domaine perso : ajouter `CNAME`, mettre `url` sur le domaine et `baseurl: ""`.
 - Le propriétaire travaille depuis **plusieurs ordinateurs** : toujours faire `git pull` avant de modifier.
 
 ## Préférences
 
 - Répondre et rédiger les messages de commit **en français**.
-- Le contenu du site est un mélange français / anglais : garder la langue déjà utilisée dans la page modifiée.
+- Le site est **bilingue FR/EN** : chaque texte existe deux fois, en `<span lang="fr">` / `<span lang="en">` (ou `<p lang=…>`, etc.). Le CSS masque la langue inactive ; le bouton FR/EN est dans l'en-tête. Toujours écrire les deux versions.
 - Ne commit/push que lorsque c'est demandé.
 
-## Pages personnalisées (le vrai contenu)
-
-Le menu est défini dans `_data/navigation.yml`.
+## Structure (Jekyll sans thème externe)
 
 | Page | Fichier | URL |
 |---|---|---|
-| Accueil (bloc `home-hero`) | `_pages/1stpage.md` | `/` |
-| DICOM → STL | `_pages/dicom-converter.md` | `/dicom-stl/` |
-| Meshmixer Portfolio (vidéos) | `_pages/Meshmixer porfolio.md` | `/meshmixerportfolio/` |
-| Téléchargement STL | `_pages/STL.md` | `/stl/` |
-| Stamp creator (outil) | `_pages/stamp.html` + `assets/js/stamp.js` | `/stamp/` |
-| À propos | `_pages/about.md` | `/about/` |
+| Accueil (intro + démo à onglets + cartes) | `index.html` | `/` |
+| Télécharger OMFS Planner | `_pages/telecharger.html` | `/telecharger/` |
+| Tutoriels (vidéos YouTube) | `_pages/tutoriels.html` | `/tutoriels/` |
+| Fichiers STL | `_pages/fichiers.html` | `/fichiers/` |
+| Stamp creator | `_pages/stamp.html` + `assets/js/stamp.js` | `/stamp/` |
+| À propos (photo, mission, remerciements) | `_pages/a-propos.html` | `/a-propos/` |
 
-- Vidéos du portfolio : un bloc `<div>` sombre par vidéo (commentaire `<!-- Video N -->`) contenant un `<iframe>`. Copier un bloc existant pour en ajouter une.
-- CSS perso : chargés dans `_includes/head/custom.html` (`assets/css/CustomChatGPTvideo.css`, `assets/css/collapse.css`), styles globaux dans `assets/css/main.scss` et `_sass/`.
-- Fichiers 3D / STL : `assets/3d/`. Images : `images/`.
-- `_posts/`, `_portfolio/`, `_publications/`, `_talks/`, `_teaching/` et plusieurs pages de `_pages/` (`markdown.md`, `terms.md`, etc.) sont encore le contenu d'exemple du thème.
-
-## Configuration
-
-- `_config.yml` : `url: "https://omfsvsp.com"` et `baseurl: ""` — ne pas remettre `/Meshmixer-project` (le domaine perso sert le site à la racine).
-- Liens internes : utiliser `{{ base_path }}` ou des chemins absolus `/…`.
+- Layout unique : `_layouts/default.html` (en-tête, pied de page avec crédit, remerciements et « pull requests bienvenues »).
+- Style unique : `assets/css/site.css` (couleurs en variables, mode sombre automatique). Comportements : `assets/js/site.js`.
+- Contenu en données :
+  - `_data/navigation.yml` : menu ;
+  - `_data/videos.yml` : vidéos des tutoriels (copier un bloc pour en ajouter une) ;
+  - `_data/files.yml` : STL à télécharger (fichiers dans `files/`) ;
+  - `_data/demo.yml` : onglets de la démo de l'accueil. Les vidéos d'exemple vont dans `assets/media/` puis dans le champ `video`.
+- Les anciennes URL (`/meshmixerportfolio/`, `/stl/`, `/about/`, `/dicom-stl/`) redirigent via `redirect_from`.
+- Liens internes : toujours `{{ '/chemin/' | relative_url }}` (à cause du `baseurl`).
 
 ## Prévisualiser en local
 
@@ -46,7 +44,6 @@ Le menu est défini dans `_data/navigation.yml`.
 brew install ruby@3.3   # une fois par ordinateur
 ./scripts/preview.sh    # installe les gems au besoin (dans vendor/bundle) puis lance Jekyll
 ```
-Puis ouvrir http://localhost:4000 (se met à jour automatiquement à chaque sauvegarde ; Ctrl+C pour arrêter).
-- Utiliser **Ruby 3.3** (comme GitHub Pages) : le Ruby de macOS (2.6) est trop vieux et Ruby 4 casse Jekyll 3.9 (`cannot load such file -- csv`).
-- Docker n'est plus nécessaire (le `Dockerfile` exige un `Gemfile.lock` qui est ignoré par git, donc le build échoue).
-`_site/` et `.sass-cache/` sont générés et ignorés par git.
+Puis ouvrir http://localhost:4000 (`_config.local.yml` remet `baseurl` à vide en local).
+- Utiliser **Ruby 3.3** (comme GitHub Pages) : le Ruby de macOS (2.6) est trop vieux et Ruby 4 casse Jekyll 3.9.
+`_site/`, `vendor/` et `Gemfile.lock` sont ignorés par git.

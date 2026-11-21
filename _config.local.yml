@@ -1,1 +1,3 @@
+# Surcharge pour la prévisualisation locale (scripts/preview.sh)
 url: "http://localhost:4000"
+baseurl: ""

@@ -1,0 +1,76 @@
+---
+title: "Télécharger OMFS Planner"
+permalink: /telecharger/
+redirect_from:
+  - /download/
+  - /planner/
+---
+<div class="page-head">
+  <h1 lang="fr">Télécharger OMFS Planner</h1><h1 lang="en">Download OMFS Planner</h1>
+  <p lang="fr">Un add-on Blender pour planifier des chirurgies maxillo-faciales de routine et concevoir les guides à imprimer : génioplastie, Le Fort I, BSSO, occlusion segmentaire.</p>
+  <p lang="en">A Blender add-on to plan routine maxillofacial surgery and design the guides to print: genioplasty, Le Fort I, BSSO, segmental occlusion.</p>
+</div>
+
+<div class="prose">
+  <div lang="fr">
+    <h2>Installation en une ligne</h2>
+    <p>Pour macOS 14 ou plus récent, avec une puce Apple. Ouvrez le Terminal (Applications › Utilitaires) et collez :</p>
+  </div>
+  <div lang="en">
+    <h2>One-line install</h2>
+    <p>For macOS 14 or later, on Apple silicon. Open Terminal (Applications › Utilities) and paste:</p>
+  </div>
+  <div class="cmd">
+    <code id="install-cmd">{{ site.install_cmd }}</code>
+    <button class="copy" type="button" data-copy="install-cmd"><span lang="fr">Copier</span><span lang="en">Copy</span></button>
+  </div>
+
+  <div lang="fr">
+    <p style="margin-top:16px">Le script installe ce qui manque et saute ce qui est déjà là :</p>
+    <ul>
+      <li><strong>Blender 5.2</strong>, téléchargé sur blender.org. Une autre version déjà installée n'est pas touchée.</li>
+      <li><strong>Les outils Xcode d'Apple</strong> (pour git) : une fenêtre d'Apple s'ouvre, cliquez Installer.</li>
+      <li><strong>Le projet</strong>, dans <code>~/Projects/omfs-planner</code>, et l'extension, reliée à Blender et activée.</li>
+      <li><strong>La segmentation</strong> : un environnement Python (~1 Go) et les poids du modèle.</li>
+    </ul>
+    <p>Comptez 15 à 30 minutes selon la connexion. Ensuite, dans Blender : onglet <strong>OMFS</strong> (touche N dans la vue 3D) › <strong>Case</strong> › <strong>Nouveau cas</strong>. Il suffit d'un CBCT (dossier DICOM) et des deux empreintes optiques (STL).</p>
+
+    <h2>Mettre à jour</h2>
+    <p>Dans Blender, panneau <strong>Installation et mises à jour</strong> › Rechercher, puis Mettre à jour, puis redémarrez Blender. Relancer la ligne d'installation fait aussi la mise à jour. Vos cas ne sont jamais touchés.</p>
+
+    <h2>Installation pas à pas</h2>
+    <p>Pour installer à la main, ou pour voir ce que fait chaque étape, suivez le <a href="{{ site.planner_repo }}#readme">README sur GitHub</a>.</p>
+
+    <h2>Données des patients</h2>
+    <p>Tout reste sur votre ordinateur. Aucune donnée de patient n'est envoyée nulle part, et le dépôt bloque les DICOM, maillages et fichiers <code>.blend</code>.</p>
+
+    <h2>Contribuer</h2>
+    <p>Le code est public sous licence GPL-3.0. Les pull requests sont les bienvenues, tout comme les signalements de bogues et les idées : ouvrez une <a href="{{ site.planner_repo }}/issues">issue</a> ou une <a href="{{ site.planner_repo }}/pulls">pull request</a> sur GitHub.</p>
+  </div>
+
+  <div lang="en">
+    <p style="margin-top:16px">The script installs whatever is missing and skips what is already there:</p>
+    <ul>
+      <li><strong>Blender 5.2</strong>, downloaded from blender.org. Any other installed version is left alone.</li>
+      <li><strong>Apple's Xcode tools</strong> (for git): an Apple window opens, click Install.</li>
+      <li><strong>The project</strong>, in <code>~/Projects/omfs-planner</code>, and the extension, linked to Blender and enabled.</li>
+      <li><strong>Segmentation</strong>: a Python environment (~1 GB) and the model weights.</li>
+    </ul>
+    <p>Allow 15 to 30 minutes depending on your connection. Then, in Blender: <strong>OMFS</strong> tab (N key in the 3D view) › <strong>Case</strong> › <strong>New case</strong>. All you need is one CBCT (DICOM folder) and both intraoral scans (STL).</p>
+
+    <h2>Updating</h2>
+    <p>In Blender, open the <strong>Installation and updates</strong> panel › Check, then Update, then restart Blender. Running the install line again also updates. Your cases are never touched.</p>
+
+    <h2>Step-by-step install</h2>
+    <p>To install by hand, or to see what each step does, follow the <a href="{{ site.planner_repo }}#readme">README on GitHub</a>.</p>
+
+    <h2>Patient data</h2>
+    <p>Everything stays on your computer. No patient data is sent anywhere, and the repository blocks DICOM, mesh and <code>.blend</code> files.</p>
+
+    <h2>Contributing</h2>
+    <p>The code is public under the GPL-3.0 license. Pull requests are welcome, as are bug reports and ideas: open an <a href="{{ site.planner_repo }}/issues">issue</a> or a <a href="{{ site.planner_repo }}/pulls">pull request</a> on GitHub.</p>
+  </div>
+
+  <p class="note" lang="fr">OMFS Planner est un outil de recherche et d'enseignement, pas un dispositif médical homologué. Chaque plan et chaque guide doivent être vérifiés par le chirurgien.</p>
+  <p class="note" lang="en">OMFS Planner is a research and teaching tool, not a certified medical device. Every plan and every guide must be verified by the surgeon.</p>
+</div>

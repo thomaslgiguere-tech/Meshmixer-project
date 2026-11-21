@@ -1,0 +1,9 @@
+# Fichiers à télécharger (page /fichiers/). Déposer le fichier dans files/ et ajouter une entrée.
+- file: Articulateurmaxillo.stl
+  size: "5,5 Mo"
+  fr: { title: "Articulateur maxillo", text: "Articulateur imprimable pour monter les modèles en occlusion." }
+  en: { title: "Maxillo articulator", text: "Printable articulator to mount models in occlusion." }
+- file: guide_arcade_spee.stl
+  size: "96 Ko"
+  fr: { title: "Cylindres", text: "À importer pour accélérer le positionnement des trous dans une gouttière occlusale." }
+  en: { title: "Cylinders", text: "Import to speed up placing the holes in an occlusal splint." }

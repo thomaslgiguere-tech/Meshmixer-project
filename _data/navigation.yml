@@ -1,39 +1,16 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
-
-main:
-  - title: "DICOM → STL"
-    url: /dicom-stl/
-
-#  - title: "Publications"
-#    url: /publications/
-
-#  - title: "Talks"
-#    url: /talks/    
-
-#  - title: "Teaching"
-#    url: /teaching/    
-    
-  - title: "Meshmixer Portfolio"
-    url: /meshmixerportfolio/
-        
-#  - title: "Blog Posts"
-#    url: /blog-posts/
-    
-  - title: "STL files"
-    url: /stl/
-
-  - title: "Stamp creator"
-    url: /stamp/
-  
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "About this project"
-    url: /about/
+# Menu du haut (ordre d'affichage)
+- fr: "OMFS Planner"
+  en: "OMFS Planner"
+  url: /telecharger/
+- fr: "Tutoriels"
+  en: "Tutorials"
+  url: /tutoriels/
+- fr: "Fichiers"
+  en: "Files"
+  url: /fichiers/
+- fr: "Stamp creator"
+  en: "Stamp creator"
+  url: /stamp/
+- fr: "À propos"
+  en: "About"
+  url: /a-propos/

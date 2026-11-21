@@ -1,0 +1,36 @@
+---
+title: "Fichiers"
+permalink: /fichiers/
+redirect_from:
+  - /stl/
+---
+<div class="page-head">
+  <h1 lang="fr">Fichiers</h1><h1 lang="en">Files</h1>
+  <p lang="fr">Des STL prêts à importer, libres d'utilisation. Cliquez sur Télécharger pour enregistrer le fichier.</p>
+  <p lang="en">Ready-to-import STL files, free to use. Click Download to save the file.</p>
+</div>
+
+<div class="files">
+  {% for f in site.data.files %}
+  <div class="file">
+    <div>
+      <h3 lang="fr">{{ f.fr.title }}</h3><h3 lang="en">{{ f.en.title }}</h3>
+      <p lang="fr">{{ f.fr.text }}</p><p lang="en">{{ f.en.text }}</p>
+      <div class="meta">{{ f.file }} · {{ f.size }}</div>
+    </div>
+    <a class="btn" href="{{ '/files/' | append: f.file | relative_url }}" download><span lang="fr">Télécharger</span><span lang="en">Download</span></a>
+  </div>
+  {% endfor %}
+</div>
+
+<section>
+  <h2 class="sec-title"><span lang="fr">Outil</span><span lang="en">Tool</span></h2>
+  <div class="cards">
+    <a class="card" href="{{ '/stamp/' | relative_url }}">
+      <h3>Stamp creator</h3>
+      <p lang="fr">Tapez un texte et copiez-le tel quel, en police à chasse fixe.</p>
+      <p lang="en">Type some text and copy it as is, in a monospace font.</p>
+      <span class="go">→ <span lang="fr">Ouvrir</span><span lang="en">Open</span></span>
+    </a>
+  </div>
+</section>

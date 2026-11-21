@@ -1,31 +1,59 @@
----
-layout: compress
----
-
-{% include base_path %}
-
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
-
-  <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
-    {{ content }}
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Langue choisie avant l'affichage, pour éviter un clignotement FR/EN */
+    (function(){var l;try{l=localStorage.getItem('omfs-lang')}catch(e){}
+      if(l!=='fr'&&l!=='en'){l=(navigator.language||'fr').toLowerCase().indexOf('fr')===0?'fr':'en'}
+      document.documentElement.lang=l})();
+  </script>
+  {% seo %}
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#contenu"><span lang="fr">Aller au contenu</span><span lang="en">Skip to content</span></a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <svg width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 5v16M5 13h16" stroke="var(--accent)" stroke-width="1.8"/><circle cx="13" cy="13" r="4" fill="var(--bg)" stroke="currentColor" stroke-width="1.8"/></svg>
+        OMFS In-House VSP
+      </a>
+      <nav class="links" aria-label="Menu">
+        {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}><span lang="fr">{{ item.fr }}</span><span lang="en">{{ item.en }}</span></a>
+        {% endfor %}
+      </nav>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang="fr">FR</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
     </div>
+  </header>
 
-    {% include scripts.html %}
+  <main id="contenu" class="wrap">
+    {{ content }}
+  </main>
 
-  </body>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p><span lang="fr">Créé par</span><span lang="en">Created by</span> <a href="{{ '/a-propos/' | relative_url }}">Thomas Lafontaine-Giguère, DMD</a> · <span lang="fr">projet personnel, gratuit et open source.</span><span lang="en">a personal, free and open-source project.</span></p>
+        <p><span lang="fr">Remerciements spéciaux au Dr Dufresne et au Dr Nate Ferley.</span><span lang="en">Special thanks to Dr. Dufresne and Dr. Nate Ferley.</span></p>
+        <p class="muted"><span lang="fr">Outil de recherche et d'enseignement, pas un dispositif médical homologué. Chaque plan doit être vérifié par le chirurgien.</span><span lang="en">A research and teaching tool, not a certified medical device. Every plan must be verified by the surgeon.</span></p>
+      </div>
+      <div class="footer-side">
+        <p><span lang="fr">Les pull requests sont les bienvenues :</span><span lang="en">Pull requests are welcome:</span></p>
+        <p><a href="{{ site.planner_repo }}">omfs-planner</a> · <a href="{{ site.site_repo }}"><span lang="fr">ce site</span><span lang="en">this site</span></a></p>
+        <p class="muted">© {{ site.time | date: '%Y' }} · <span lang="fr">Québec, Canada</span><span lang="en">Quebec, Canada</span></p>
+      </div>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
 </html>

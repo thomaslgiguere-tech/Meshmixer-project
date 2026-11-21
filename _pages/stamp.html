@@ -1,41 +1,22 @@
 ---
-layout: single
-title: "Stamp creator tool"
+title: "Stamp creator"
 permalink: /stamp/
-author_profile: true
 ---
+<div class="page-head">
+  <h1>Stamp creator</h1>
+  <p lang="fr">Tapez votre texte en haut. Il s'affiche en dessous, prêt à sélectionner ou à copier.</p>
+  <p lang="en">Type your text at the top. It shows up below, ready to select or copy.</p>
+</div>
 
-<style>
-.stamp-app { display:flex; flex-direction:column; gap:1rem; }
-.stamp-top { height:50vh; }
-.stamp-bottom { height:50vh; }
-#stamp-input {
-  width:100%; height:100%; box-sizing:border-box; padding:1rem;
-  font: 1rem ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
-  border:1px solid #ccc; border-radius:6px; resize:none; background:#fff; color:#000; caret-color:#000;
-}
-.output-box {
-  background:#000; color:#fff; white-space:pre; padding:1rem; height:100%;
-  border-radius:6px; overflow:auto; font: 1rem ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
-}
-.actions { display:flex; gap:.5rem; flex-wrap:wrap; }
-.actions button { padding:.5rem .75rem; border:1px solid #ccc; border-radius:6px; background:#f7f7f7; cursor:pointer; }
-</style>
-
-<div class="stamp-app">
-  <div class="stamp-top">
-    <label for="stamp-input"><strong>Enter text to stamp (top half)</strong></label>
-    <textarea id="stamp-input" placeholder="Type here..."></textarea>
+<div class="stamp">
+  <label for="stamp-input"><span lang="fr">Texte à graver</span><span lang="en">Text to stamp</span></label>
+  <textarea id="stamp-input" spellcheck="false"></textarea>
+  <div class="actions">
+    <button class="btn ghost" id="clear-btn" type="button"><span lang="fr">Effacer</span><span lang="en">Clear</span></button>
+    <button class="btn ghost" id="select-btn" type="button"><span lang="fr">Sélectionner</span><span lang="en">Select output</span></button>
+    <button class="btn" id="copy-btn" type="button"><span lang="fr">Copier</span><span lang="en">Copy</span></button>
   </div>
-
-  <div class="stamp-bottom">
-    <div class="actions">
-      <button id="clear-btn" type="button">Clear</button>
-      <button id="select-btn" type="button">Select output</button>
-      <button id="copy-btn" type="button">Copy</button>
-    </div>
-    <div id="stamp-output" class="output-box" aria-label="Output"></div>
-  </div>
+  <div id="stamp-output" class="stamp-out" aria-label="Résultat / Output"></div>
 </div>
 
 <script defer src="{{ '/assets/js/stamp.js' | relative_url }}"></script>

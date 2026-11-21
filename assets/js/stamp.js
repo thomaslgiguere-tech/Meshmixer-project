@@ -35,17 +35,18 @@
 
     copyBtn.addEventListener('click', async () => {
       if (!output.textContent.trim()) return; // Don't copy if empty
-      const originalText = copyBtn.textContent;
+      const originalText = copyBtn.innerHTML;
+      const fr = document.documentElement.lang !== 'en';
       try {
         await navigator.clipboard.writeText(output.textContent);
-        copyBtn.textContent = '✓ Copied!';
+        copyBtn.textContent = fr ? 'Copié ✓' : 'Copied ✓';
       } catch (err) {
         console.error('Copy failed:', err);
-        copyBtn.textContent = 'Copy failed';
+        copyBtn.textContent = fr ? 'Sélectionné' : 'Selected';
         // Fallback to selection
         selectBtn.click();
       } finally {
-        setTimeout(() => copyBtn.textContent = originalText, 1200);
+        setTimeout(() => copyBtn.innerHTML = originalText, 1200);
       }
     });
 

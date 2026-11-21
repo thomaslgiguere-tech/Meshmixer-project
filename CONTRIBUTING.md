@@ -1,8 +1,11 @@
-Contributions are welcome! 
+# Contribuer
 
-Please add issues and make pull requests. There are no stupid questions. All ideas are welcome. This is a volunteer project. Be excellent to each other.
+Les pull requests sont les bienvenues ! Corrections, nouvelles vidéos, fichiers STL utiles, traductions : tout est apprécié.
 
-Bug reports and feature requests to the template  should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+- **Une vidéo** : ajouter un bloc dans `_data/videos.yml`.
+- **Un fichier STL** : le déposer dans `files/` et ajouter une entrée dans `_data/files.yml`.
+- **Le texte d'une page** : `index.html` ou `_pages/`. Le site est bilingue : chaque texte existe en `lang="fr"` et en `lang="en"`.
 
-Fork from master and go from there. Remember that this repository is intended to remain a generic, ready-to-fork template that demonstrates the features of academicpages.
+Pour l'add-on lui-même, voir [omfs-planner](https://github.com/thomaslgiguere-tech/omfs-planner).
 
+Prévisualiser en local : `./scripts/preview.sh` (Ruby 3.3 requis : `brew install ruby@3.3`).
