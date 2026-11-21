@@ -43,8 +43,10 @@ Le menu est défini dans `_data/navigation.yml`.
 ## Prévisualiser en local
 
 ```bash
-bundle install          # une fois
-bundle exec jekyll serve -l -H localhost --config _config.yml,_config.local.yml
+brew install ruby@3.3   # une fois par ordinateur
+./scripts/preview.sh    # installe les gems au besoin (dans vendor/bundle) puis lance Jekyll
 ```
-Puis ouvrir http://localhost:4000. Alternative : `docker compose up`.
+Puis ouvrir http://localhost:4000 (se met à jour automatiquement à chaque sauvegarde ; Ctrl+C pour arrêter).
+- Utiliser **Ruby 3.3** (comme GitHub Pages) : le Ruby de macOS (2.6) est trop vieux et Ruby 4 casse Jekyll 3.9 (`cannot load such file -- csv`).
+- Docker n'est plus nécessaire (le `Dockerfile` exige un `Gemfile.lock` qui est ignoré par git, donc le build échoue).
 `_site/` et `.sass-cache/` sont générés et ignorés par git.
