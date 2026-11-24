@@ -1,28 +1,28 @@
 # Étapes de la démo de l'accueil (rectangles à gauche du viewport).
 # Pour brancher une vidéo : déposer le .mp4 dans assets/media/ et remplir « video ».
-# Format conseillé : MP4 (H.264), 16:10 ou 16:9, 10 à 20 s en boucle, sans son, < 8 Mo.
+# Format : MP4 (H.264) 16:9, 1280×720, 10 à 20 s en boucle, sans son, < 8 Mo (voir assets/media/README.md).
 - id: dicom
   collection: DICOM
-  video: ""          # ex. /assets/media/dicom.mp4
+  video: /assets/media/dicom.mp4
   fr: { title: "DICOM viewer", text: "Parcourir le CBCT en coupes et en volume.", todo: "Vidéo à venir : défilement des coupes axiales, coronales et sagittales." }
   en: { title: "DICOM viewer", text: "Browse the CBCT in slices and volume.", todo: "Video coming: scrolling through axial, coronal and sagittal slices." }
 - id: segmentation
   collection: Segmentation
-  video: ""
+  video: /assets/media/segmentation.mp4
   fr: { title: "Segmentation IA et reconstruction virtuelle", text: "Os, dents et canaux, avec les empreintes optiques.", todo: "Vidéo à venir : la scène avec les STL segmentés, chacun de sa couleur." }
   en: { title: "AI segmentation and virtual reconstruction", text: "Bone, teeth and canals, with the intraoral scans.", todo: "Video coming: the scene with segmented STLs, each in its own colour." }
+- id: occlusion
+  collection: Occlusion
+  video: /assets/media/occlusion.mp4
+  fr: { title: "Assise de l'occlusion", text: "Arcades mises en occlusion finale, avec carte de chevauchement.", todo: "Vidéo à venir : mise en occlusion des arcades." }
+  en: { title: "Occlusal seating", text: "Arches seated in final occlusion, with an overlap map.", todo: "Video coming: seating the arches in occlusion." }
 - id: planification
   collection: Planning
-  video: ""
+  video: /assets/media/planification.mp4
   fr: { title: "Planification chirurgicale", text: "Ostéotomies et déplacements en millimètres.", todo: "Vidéo à venir : déplacement des segments osseux." }
   en: { title: "Surgical planning", text: "Osteotomies and movements in millimetres.", todo: "Video coming: moving the bone segments." }
 - id: guides
   collection: Guides
-  video: ""
-  fr: { title: "Génération de guides chirurgicaux", text: "Guides de coupe et gouttières prêts à imprimer.", todo: "Vidéo à venir : génération d'un guide de coupe." }
-  en: { title: "Surgical guide generation", text: "Print-ready cutting guides and splints.", todo: "Video coming: generating a cutting guide." }
-- id: export
-  collection: Export
-  video: ""
-  fr: { title: "Export d'images pour référence", text: "Vues avant/après pour le dossier et la salle d'opération.", todo: "Vidéo à venir : vues exportées pour référence." }
-  en: { title: "Image export for reference", text: "Before/after views for the chart and the OR.", todo: "Video coming: exported reference views." }
+  video: /assets/media/guides.mp4
+  fr: { title: "Génération de guides chirurgicaux", text: "Gouttières et guides de coupe prêts à imprimer.", todo: "Vidéo à venir : génération d'une gouttière." }
+  en: { title: "Surgical guide generation", text: "Print-ready splints and cutting guides.", todo: "Video coming: generating a splint." }

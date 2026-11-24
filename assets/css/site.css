@@ -64,7 +64,7 @@ section{padding-block:40px}
 .step small{display:block;font:400 13px/1.4 var(--body);color:var(--muted);margin-top:4px}
 .step[aria-selected="true"] small{color:color-mix(in srgb,var(--accent-ink) 80%,transparent)}
 
-.viewport{position:relative;margin:0;aspect-ratio:16/10;max-width:100%;border-radius:var(--radius);overflow:hidden;
+.viewport{position:relative;margin:0;aspect-ratio:16/9;max-width:100%;border-radius:var(--radius);overflow:hidden;
   background:
     linear-gradient(var(--bl-grid) 1px,transparent 1px) 0 0/40px 40px,
     linear-gradient(90deg,var(--bl-grid) 1px,transparent 1px) 0 0/40px 40px,
@@ -79,6 +79,10 @@ section{padding-block:40px}
 .vp-panel{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;z-index:1}
 .vp-panel[hidden]{display:none}
 .vp-panel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* Vraie vidéo Blender : on retire le faux viewport (en-tête, gizmo, axes, grille) */
+.viewport:has(video){background:var(--bl-bg2)}
+.viewport:has(video)::before,.viewport:has(video)::after,.viewport:has(video) .vp-head,.viewport:has(video) .gizmo,.viewport:has(video) .vp-foot{display:none}
+.viewport:has(video) .vp-panel{padding:0}
 .ph{display:grid;gap:8px;justify-items:center;max-width:30em}
 .ph b{font:500 15px/1.3 var(--body);color:#ececec}
 .ph span{color:var(--bl-dim);font-size:12px}
